@@ -132,16 +132,18 @@ verwijderen, deze wordt niet gebruikt.
 Plaats vervolgens onder ```services.AddControllers();``` het volgende stuk code:
 
 ```csharp
-        services.AddAuthentication("Bearer")
-            .AddJwtBearer("Bearer", options =>
-            {
-                options.Authority = "http://localhost:5001";
-
-                options.TokenValidationParameters = new TokenValidationParameters
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
                 {
-                    ValidateAudience = false
-                };
-            });
+                    options.Authority = "http://localhost:5001";
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = false
+                    };
+
+                    options.RequireHttpsMetadata = false;
+                });
 ```
 
 Haal vervolgens in ```Configure()``` het ```if statement``` weg, deze wordt niet gebruikt. Als laatst moet onder ```app.UseRouting();``` 
