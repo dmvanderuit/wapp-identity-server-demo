@@ -38,7 +38,7 @@ dotnet sln add .\src\IdentityServer\IdentityServer.csproj
 ```
 
 <br></br>
-<b>Pas vervolgens in properties/launchSettings.json de applicationUrl port aan naar ```5001```.</b>
+<b>Pas vervolgens in properties/launchSettings.json de applicationUrl aan naar ```"applicationUrl": "http://localhost:5001"```.</b>
 
 <br>
 
@@ -54,6 +54,17 @@ Ga naar Config.cs en pas de ApiScopes aan. In plaats van een array wordt er gebr
         {
             new ApiScope("api1", "My API")
         };
+```
+
+<br>
+
+Voeg in het bestand Startup.cs in de methode Configure helemaal bovenaan in de methode de volgende code toe:
+
+```csharp
+app.UseCookiePolicy(new CookiePolicyOptions
+    {
+        MinimumSameSitePolicy = SameSiteMode.Lax
+    });
 ```
 
 <br>
@@ -74,7 +85,7 @@ geuncomment worden, later in de workshop gaan wij gebruik maken van de Identity 
 
  Om te controleren of de Identity Server correct is opgezet, kan de applicatie worden gestart.
  Navigeer naar <br>
- ```https://localhost:5001/.well-known/openid-configuration```<br>
+ ```http://localhost:5001/.well-known/openid-configuration```<br>
  Als alles goed is verlopen zul je nu het [Discovery Document](https://docs.identityserver.io/en/latest/endpoints/discovery.html) zien, in het Discovery Document staat metadata over Identity Server, zoals de beschikbare scopes.
 
 <br>
@@ -99,7 +110,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 
 
 <br></br>
-<b>Pas vervolgens in properties/launchSettings.json de applicationUrl HTTPS port aan naar ```6001```, De gewone HTTP url kun je verwijderen.</b>
+<b>Pas vervolgens in properties/launchSettings.json de applicationUrl  aan naar ```"applicationUrl": "http://localhost:6001",```.</b>
 
 Er is al een controller voor ons gemaakt, de WeatherForecastController. Ga naar het bestand WeatherForecastController.cs en pas ```[Route("[controller]")]``` aan naar ```[Route("weatherforecast")]```.<br>
 
@@ -124,7 +135,7 @@ Plaats vervolgens onder ```services.AddControllers();``` het volgende stuk code:
         services.AddAuthentication("Bearer")
             .AddJwtBearer("Bearer", options =>
             {
-                options.Authority = "https://localhost:5001";
+                options.Authority = "http://localhost:5001";
 
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -143,7 +154,7 @@ app.UseAuthentication();
 
 Door dit toe te voegen is de Authenticatie middelware toegevoegd aan de pipeline. Hierdoor wordt de inkomende token gevalideerd en tevens gecontroleerd of de token gebruikt mag worden met deze API.
 
-Start de applicatie en navigeer naar ```https://localhost:6001/weatherforecast```. Als alles goed is gegaan zul je een ```401: unauthorized``` statuscode krijgen, de api is nu beschermd.
+Start de applicatie en navigeer naar ```http://localhost:6001/weatherforecast```. Als alles goed is gegaan zul je een ```401: unauthorized``` statuscode krijgen, de api is nu beschermd.
 
 
 ## Authorisatie toevoegen aan de API
@@ -212,7 +223,7 @@ Hierna moet nog de OpenIdConnect Nuget package worden toegevoegd aan het MvcClie
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```
 <br>
-<b>Verander vervolgens de port in properties/launchsettings.json  van de HTTPS naar 5002. De HTTP url kun je weghalen.</b>
+<b>Verander vervolgens de applicationUrl in properties/launchsettings.json naar ```"applicationUrl": "http://localhost:5002",```</b>
 
 <br><br>
 
@@ -229,13 +240,16 @@ services.AddAuthentication(options =>
     .AddCookie("Cookies")
     .AddOpenIdConnect("oidc", options =>
     {
-        options.Authority = "https://localhost:5001";
+        options.Authority = "http://localhost:5001";
 
         options.ClientId = "mvc";
         options.ClientSecret = "secret";
         options.ResponseType = "code";
 
         options.SaveTokens = true;
+        
+        options.NonceCookie.SameSite = SameSiteMode.Lax;
+        options.CorrelationCookie.SameSite = SameSiteMode.Lax;
     });
 ```
 
@@ -308,9 +322,9 @@ Aan de lijst van Clients moet een nieuwe Client worden toegevoegd, die onze MvcC
 
             AllowedGrantTypes = GrantTypes.Code,
 
-            RedirectUris = { "https://localhost:5002/signin-oidc" },
+            RedirectUris = { "http://localhost:5002/signin-oidc" },
 
-            PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
+            PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
             AllowedScopes = new List<string>
             {
@@ -342,9 +356,9 @@ public static IEnumerable<Client> Clients =>
 
             AllowedGrantTypes = GrantTypes.Code,
 
-            RedirectUris = { "https://localhost:5002/signin-oidc" },
+            RedirectUris = { "http://localhost:5002/signin-oidc" },
 
-            PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
+            PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
             AllowedScopes = new List<string>
             {
@@ -377,7 +391,7 @@ public async Task<IActionResult> Weather()
 
     var client = new HttpClient();
     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-    var content = await client.GetStringAsync("https://localhost:6001/weatherforecast");
+    var content = await client.GetStringAsync("http://localhost:6001/weatherforecast");
 
     ViewBag.Json = JArray.Parse(content).ToString();
     return View("json");
@@ -390,5 +404,5 @@ Het allerlaatste dat er moet gebeuren is het maken van een view om de data die w
 <pre>@ViewBag.Json</pre>
 ```
 
-Start alle applicaties en navigeer naar ```https://localhost/home/weather```, als alles goed is gegaan, en je bent ingelogd, zul je nu de data van de api zien (het weerbericht).
+Start alle applicaties en navigeer naar ```http://localhost/home/weather```, als alles goed is gegaan, en je bent ingelogd, zul je nu de data van de api zien (het weerbericht).
 
