@@ -3,6 +3,9 @@
 ## Inleiding
 In deze workshop wordt met behulp van Identity Server 4 authenticatie toegepast binnen een simpele applicatie. Het betreft het toevoegen van authenticatie bij een API, zodat alleen geauthoriseerden hier bij kunnen, en het toevoegen van authenticatie bij een web client zodat een gebruiker kan in- en uitloggen.
 
+*Let op:*
+- Paden op andere besturingssystemen dan Windows zouden net anders getypt kunnen worden
+- Start de applicaties niet met IIS maar met via de naam van de applicatie (of SelfHost)
 
 ### Identity Server 4 setup
 
