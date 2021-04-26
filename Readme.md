@@ -318,30 +318,8 @@ public static IEnumerable<IdentityResource> IdentityResources =>
     };
 ```
 
-Aan de lijst van Clients moet een nieuwe Client worden toegevoegd, die onze MvcClient representeerd:
+Aan de lijst van Clients moet een nieuwe Client worden toegevoegd, die onze MvcClient representeert:
 
-```csharp
-        new Client
-        {
-            ClientId = "mvc",
-            ClientSecrets = { new Secret("secret".Sha256()) },
-
-            AllowedGrantTypes = GrantTypes.Code,
-
-            RedirectUris = { "http://localhost:5002/signin-oidc" },
-
-            PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
-
-            AllowedScopes = new List<string>
-            {
-                IdentityServerConstants.StandardScopes.OpenId,
-                IdentityServerConstants.StandardScopes.Profile
-            }
-        }
-```
-Nu is de MvcClient toegevoegd aan de lijst van Clients voor de Identity Server. Daarnaast zal de MvcClient nu doorgestuurd worden naar de inlog (of uitlog) pagina als deze wel of niet ingelogd is. De MvcClient kan nu enkel bij de scopes die geleverd zijn door OpenId Connect, dat zijn dus de OpenId scope en de Profile Scope. Een andere scope die de MvcClient moet kunnen bezoeken is de ```ap1``` scope. Voeg deze toe aan de lijst van AllowedScopes.
-
-Als het goed is ziet de lijst van Clients er nu zo uit:
 
 ```csharp
 public static IEnumerable<Client> Clients =>
@@ -367,6 +345,8 @@ public static IEnumerable<Client> Clients =>
         }
     };
 ```
+
+Nu is de MvcClient toegevoegd aan de lijst van Clients voor de Identity Server. Daarnaast zal de MvcClient nu doorgestuurd worden naar de inlog (of uitlog) pagina als deze wel of niet ingelogd is. De MvcClient kan nu enkel bij de scopes die geleverd zijn door OpenId Connect, dat zijn dus de OpenId scope en de Profile Scope. Een andere scope die de MvcClient moet kunnen bezoeken is de ```ap1``` scope. Voeg deze toe aan de lijst van AllowedScopes.
 
 
 ## De MvcClient de API laten aanroepen
