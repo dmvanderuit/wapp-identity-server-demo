@@ -58,7 +58,7 @@ Ga naar Config.cs en pas de ApiScopes aan. In plaats van een array wordt er gebr
 
 <br>
 
-Voeg in het bestand Startup.cs in de methode Configure helemaal bovenaan in de methode de volgende code toe:
+Voeg in het bestand Startup.cs in de methode Configure helemaal bovenaan in de methode de volgende code toe (de methode wordt geimporteerd uit `Microsoft.AspNetCore.Http.SameSiteMode`. Hier zal IntelliSense om vragen.):
 
 ```csharp
 app.UseCookiePolicy(new CookiePolicyOptions
