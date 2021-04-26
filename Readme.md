@@ -41,7 +41,7 @@ dotnet sln add .\src\IdentityServer\IdentityServer.csproj
 ```
 
 <br></br>
-<b>Pas vervolgens in properties/launchSettings.json de applicationUrl aan naar ```"applicationUrl": "http://localhost:5001"```.</b>
+<b>Pas vervolgens in properties/launchSettings.json de applicationUrl aan naar `"applicationUrl": "http://localhost:5001"`.</b>
 
 <br>
 
@@ -113,7 +113,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 
 
 <br></br>
-<b>Pas vervolgens in properties/launchSettings.json de applicationUrl  aan naar ```"applicationUrl": "http://localhost:6001",```.</b>
+<b>Pas vervolgens in properties/launchSettings.json de applicationUrl op line 23 aan naar ```"applicationUrl": "http://localhost:6001",```.</b>
 
 Er is al een controller voor ons gemaakt, de WeatherForecastController. Ga naar het bestand WeatherForecastController.cs en pas ```[Route("[controller]")]``` aan naar ```[Route("weatherforecast")]```.<br>
 
@@ -149,7 +149,7 @@ Plaats vervolgens onder ```services.AddControllers();``` het volgende stuk code:
                 });
 ```
 
-Haal vervolgens in ```Configure()``` het ```if statement``` weg, deze wordt niet gebruikt. Als laatst moet onder ```app.UseRouting();``` 
+Haal vervolgens in ```Configure()``` het ```if statement``` weg, deze wordt niet gebruikt. Ook de regel `app.UseHttpsRedirection()` moet weggehaald worden. Als laatst moet onder ```app.UseRouting();``` 
 
 ```csharp
 app.UseAuthentication();
@@ -228,7 +228,7 @@ Hierna moet nog de OpenIdConnect Nuget package worden toegevoegd aan het MvcClie
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```
 <br>
-<b>Verander vervolgens de applicationUrl in properties/launchsettings.json naar ```"applicationUrl": "http://localhost:5002",```</b>
+<b>Verander vervolgens de applicationUrl onder het kopje `MvcClient` op line 23 in properties/launchsettings.json naar ```"applicationUrl": "http://localhost:5002",```</b>
 
 <br><br>
 
