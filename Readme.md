@@ -329,14 +329,6 @@ public static IEnumerable<Client> Clients =>
     {
         new Client
         {
-            ClientId = "client",
-            ClientSecrets = { new Secret("secret".Sha256()) },
-
-            AllowedGrantTypes = GrantTypes.ClientCredentials,
-            AllowedScopes = { "api1" }
-        },
-        new Client
-        {
             ClientId = "mvc",
             ClientSecrets = { new Secret("secret".Sha256()) },
 
