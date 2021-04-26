@@ -56,32 +56,6 @@ Ga naar Config.cs en pas de ApiScopes aan. In plaats van een array wordt er gebr
         };
 ```
 
-Hierna moeten de Clients aangepast worden, zodat de clients toegang hebben tot onze api "```api1```".
-
-```csharp
-public static IEnumerable<Client> Clients =>
-    new List<Client>
-    {
-        new Client
-        {
-            ClientId = "client",
-            AllowedGrantTypes = GrantTypes.ClientCredentials,
-
-            ClientSecrets =
-            {
-                new Secret("secret".Sha256())
-            },
-
-            AllowedScopes = { "api1" }
-        }
-    };
-```
-
-Interessant hier aan is de AllowedScopes, wat aangeeft bij welke scopes de client allemaal mag komen. In dit geval is dit enkel ```api1```. Door verschillende clients toe te voegen aan deze lijst met verschillende AllowedScopes kun je bepalen welke clients wat mogen bezoeken.
-
-De ClientId en Clientsecret kunnen gezien worden als de gebruikersnaam en wachtwoord, het zorgt er voor dat de applicatie zichzelf kan identificeren bij de Identity Server.
-
-
 <br>
 Als laatst moet Startup.cs aangepast worden. Vervang in ConfigureServices() de builder met het volgende stuk code:
 
