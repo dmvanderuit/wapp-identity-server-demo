@@ -229,7 +229,12 @@ Hierna moet nog de OpenIdConnect Nuget package worden toegevoegd aan het MvcClie
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```
 <br>
-<b>Verander vervolgens de applicationUrl onder het kopje `MvcClient` op line 23 in properties/launchsettings.json naar ```"applicationUrl": "http://localhost:5002",```</b>
+<b>Verander vervolgens de applicationUrl onder het kopje 'MvcClient' op line 23 in properties/launchsettings.json naar 
+
+```json
+"applicationUrl": "http://localhost:5002",
+```
+.</b>
 
 <br><br>
 
