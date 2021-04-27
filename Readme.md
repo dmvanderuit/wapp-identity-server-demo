@@ -384,6 +384,14 @@ public async Task<IActionResult> Weather()
 }
 ```
 
+Om dalijk gemakkelijk deze methode aan te roepen zullen we aan de NavBar een element toevoegen die hier naar wijst. Voeg aan ```Views/Shared._Layout.cshtml``` onder het list item van Privacy het volgende toe:
+
+```html
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Weather">Weather</a>
+</li>
+```
+
 Het allerlaatste dat er moet gebeuren is het maken van een view om de data die we krijgen van de API te tonen. Maak een nieuw bestand in de map ```Views/Home``` genaamd ```json.cshtml```. We willen enkel de gekregen data tonen, verwijder alles uit het bestand en voeg de volgende regel toe:
 
 ```html
