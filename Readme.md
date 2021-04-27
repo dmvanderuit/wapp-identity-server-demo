@@ -234,7 +234,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```json
 "applicationUrl": "http://localhost:5002",
 ```
-.</b>
+</b>
 
 <br><br>
 
