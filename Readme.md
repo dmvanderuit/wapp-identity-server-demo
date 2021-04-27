@@ -352,7 +352,7 @@ public static IEnumerable<Client> Clients =>
     };
 ```
 
-Nu is de MvcClient toegevoegd aan de lijst van Clients voor de Identity Server. Daarnaast zal de MvcClient nu doorgestuurd worden naar de inlog (of uitlog) pagina als deze wel of niet ingelogd is. De MvcClient kan nu enkel bij de scopes die geleverd zijn door OpenId Connect, dat zijn dus de OpenId scope en de Profile Scope. Een andere scope die de MvcClient moet kunnen bezoeken is de ```ap1``` scope. Voeg deze toe aan de lijst van AllowedScopes.
+Nu is de MvcClient toegevoegd aan de lijst van Clients voor de Identity Server. Daarnaast zal de MvcClient nu doorgestuurd worden naar de inlog (of uitlog) pagina als deze wel of niet ingelogd is. De MvcClient kan nu enkel bij de scopes die geleverd zijn door OpenId Connect, dat zijn dus de OpenId scope en de Profile Scope. Een andere scope die de MvcClient moet kunnen bezoeken is de ```api1``` scope. Voeg deze toe aan de lijst van AllowedScopes.
 
 
 ## De MvcClient de API laten aanroepen
