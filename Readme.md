@@ -393,5 +393,5 @@ Het allerlaatste dat er moet gebeuren is het maken van een view om de data die w
 Start alle applicaties en navigeer naar ```http://localhost:5002/home/weather```, je zult moeten inloggen. Login met de gebruikersnaam 'alice' en wachtwoord 'alice', ga nog een keer naar ```http://localhost:5002/home/weather``` en je zal nu de data van de api zien (het weerbericht).
 
 
-Deze gebruikersnaam en wachtwoord komen user ```TestUsers.cs```, gezien er geen gebruik wordt gemaakt van een database en er ook niet geregistreerd kan worden is dit een aangeleverde user door Identity Server.
+Deze gebruikersnaam en wachtwoord komen uit ```TestUsers.cs```, gezien er geen gebruik wordt gemaakt van een database en er ook niet geregistreerd kan worden is dit een aangeleverde user door Identity Server.
 
