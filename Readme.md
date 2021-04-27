@@ -276,6 +276,8 @@ app.UseAuthentication();
 
 toe.
 
+<b>Verwijder daarnaast app.UseHttpsRedirection()</b>
+
 Als laatst moet de ```app.UseEndpoints``` aanroep worden aangepast zodat er gebruik wordt gemaakt van authorisatie, vervang de ```app.UseEndpoints``` met:
 
 ```csharp
