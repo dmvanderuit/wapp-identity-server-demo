@@ -390,5 +390,5 @@ Het allerlaatste dat er moet gebeuren is het maken van een view om de data die w
 <pre>@ViewBag.Json</pre>
 ```
 
-Start alle applicaties en navigeer naar ```http://localhost:5002/home/weather```, als alles goed is gegaan, en je bent ingelogd, zul je nu de data van de api zien (het weerbericht).
+Start alle applicaties en navigeer naar ```http://localhost:5002/home/weather```, je zult moeten inloggen. Login met de gebruikersnaam 'alice' en wachtwoord 'alice', ga nog een keer naar ```http://localhost:5002/home/weather``` en je zal nu de data van de api zien (het weerbericht).
 
