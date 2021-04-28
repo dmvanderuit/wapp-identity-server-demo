@@ -75,7 +75,6 @@ Als laatst moet Startup.cs aangepast worden. Vervang in ConfigureServices() de b
 
 ```csharp
     var builder = services.AddIdentityServer()
-        .AddDeveloperSigningCredential()
         .AddInMemoryIdentityResources(Config.IdentityResources)
         .AddInMemoryApiScopes(Config.ApiScopes)
         .AddInMemoryClients(Config.Clients);
