@@ -1,36 +1,71 @@
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\appsettings.json
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.exe
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.deps.json
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.runtimeconfig.json
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\ref\api.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\api.pdb
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.csprojAssemblyReference.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.AssemblyInfo.cs
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.csproj.CopyComplete
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\ref\api.dll
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.pdb
-C:\Users\Geert-jan\Desktop\is4workshop\src\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/appsettings.Development.json
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/appsettings.json
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.exe
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.deps.json
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.runtimeconfig.json
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.runtimeconfig.dev.json
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/ref/api.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/api.pdb
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Microsoft.OpenApi.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.csprojAssemblyReference.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.AssemblyInfoInputs.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.AssemblyInfo.cs
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.csproj.CoreCompileInputs.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.Manifest.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.xml
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/scopedcss/bundle/api.styles.css
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.RazorTargetAssemblyInfo.cache
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.csproj.CopyComplete
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/ref/api.dll
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.pdb
+C:/Users/Geert-jan/Desktop/is4workshop/src/api/obj/Debug/net5.0/api.genruntimeconfig.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/appsettings.Development.json
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/appsettings.json
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.StaticWebAssets.xml
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.deps.json
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.runtimeconfig.json
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.runtimeconfig.dev.json
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/ref/api.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/api.pdb
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.csproj.AssemblyReference.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.AssemblyInfoInputs.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.AssemblyInfo.cs
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.csproj.CoreCompileInputs.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cs
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.Manifest.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/scopedcss/bundle/api.styles.css
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.RazorTargetAssemblyInfo.cache
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.csproj.CopyComplete
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/ref/api.dll
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.pdb
+/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/api/obj/Debug/net5.0/api.genruntimeconfig.cache

@@ -34,7 +34,22 @@ namespace mvcclient.Controllers
 
             ViewBag.Json = JArray.Parse(content).ToString();
 
-            return View("weather");
+            return View("json");
+        }        
+        
+        public async Task<IActionResult> Cars()
+        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+
+            var client = new HttpClient();
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+            var content = await client.GetStringAsync("http://localhost:6001/cars");
+
+            ViewBag.Json = JArray.Parse(content).ToString();
+
+            return View("json");
         }
 
         public IActionResult Index()

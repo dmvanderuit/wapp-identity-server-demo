@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "yr5TQkSLcpXH+zMnMNopcem5MnR3ccwpB5qbYHgp6PXEJd71JYudBM3Svu7WlrYW2hmk72hfu6xToPGPRHiGQg==",
+  "dgSpecHash": "UMr+DsPtTL2eRqatJkkePKFEHxttkx3xSWNikkZXLn03Su+e4lz7AzvugRXKe+RuhcbMJ1VjakDoR6hDiSJW/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\mvcclient\\mvcclient.csproj",
+  "projectFilePath": "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/mvcclient/mvcclient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.5\\microsoft.aspnetcore.authentication.openidconnect.5.0.5.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.identitymodel.logging\\6.7.1\\microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
-    "C:\\Users\\Geert-jan\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    "/Users/danielvanderuit/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.5/microsoft.aspnetcore.authentication.openidconnect.5.0.5.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.7.1/microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.identitymodel.logging/6.7.1/microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.identitymodel.protocols/6.7.1/microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.7.1/microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/microsoft.identitymodel.tokens/6.7.1/microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/system.identitymodel.tokens.jwt/6.7.1/system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "/Users/danielvanderuit/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,33 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\IdentityServer\\IdentityServer.csproj": {}
+    "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\IdentityServer\\IdentityServer.csproj": {
+    "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\IdentityServer\\IdentityServer.csproj",
+        "projectUniqueName": "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\IdentityServer\\IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\Geert-jan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geert-jan\\Desktop\\wapp-identity-server-demo\\is4workshop\\src\\IdentityServer\\obj\\",
+        "projectPath": "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/IdentityServer.csproj",
+        "packagesPath": "/Users/danielvanderuit/.nuget/packages/",
+        "outputPath": "/Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Geert-jan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/danielvanderuit/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/miniprofiler/api/v3/index.json": {}
+          "https://www.myget.org/f/miniprofiler/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -45,9 +39,43 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "IdentityServer4": {
+            "IdentityServer4.AspNetIdentity": {
               "target": "Package",
               "version": "[4.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -72,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
         }
       }
     }

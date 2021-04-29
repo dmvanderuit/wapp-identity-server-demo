@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = IdentityServer
+build_property.ProjectDir = /Users/danielvanderuit/Documents/School/NOTS/NOTS WAPP/wapp-identity-server-demo/is4workshop/src/IdentityServer/

@@ -2,11 +2,11 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
+using IdentityServer4;
 
-namespace identityserver
+namespace IdentityServer
 {
     public static class Config
     {
@@ -16,6 +16,7 @@ namespace identityserver
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
             };
+
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
@@ -23,26 +24,26 @@ namespace identityserver
             };
 
         public static IEnumerable<Client> Clients =>
-          new List<Client>
-          {
-        new Client
-        {
-            ClientId = "mvc",
-            ClientSecrets = { new Secret("secret".Sha256()) },
-
-            AllowedGrantTypes = GrantTypes.Code,
-
-            RedirectUris = { "http://localhost:5002/signin-oidc" },
-
-            PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
-
-            AllowedScopes = new List<string>
+            new List<Client>
             {
-                IdentityServerConstants.StandardScopes.OpenId,
-                IdentityServerConstants.StandardScopes.Profile,
-                "api1"
-            }
-        }
-          };
+                new Client
+                {
+                    ClientId = "mvc",
+                    ClientSecrets = { new Secret("secret".Sha256()) },
+
+                    AllowedGrantTypes = GrantTypes.Code,
+
+                    RedirectUris = { "http://localhost:5002/signin-oidc" },
+
+                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    }
+                }
+            };
     }
 }

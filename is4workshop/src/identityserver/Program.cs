@@ -3,13 +3,16 @@
 
 
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
+using System.Linq;
 
-namespace identityserver
+namespace IdentityServer
 {
     public class Program
     {
@@ -34,8 +37,26 @@ namespace identityserver
 
             try
             {
+                var seed = args.Contains("/seed");
+                if (seed)
+                {
+                    args = args.Except(new[] { "/seed" }).ToArray();
+                }
+
+                var host = CreateHostBuilder(args).Build();
+
+                if (seed)
+                {
+                    Log.Information("Seeding database...");
+                    var config = host.Services.GetRequiredService<IConfiguration>();
+                    var connectionString = config.GetConnectionString("DefaultConnection");
+                    SeedData.EnsureSeedData(connectionString);
+                    Log.Information("Done seeding database.");
+                    return 0;
+                }
+
                 Log.Information("Starting host...");
-                CreateHostBuilder(args).Build().Run();
+                host.Run();
                 return 0;
             }
             catch (Exception ex)
