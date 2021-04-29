@@ -649,4 +649,94 @@ nieuw account aan en log je hier vervolgens mee in.
 Je zult zien dat je toegang krijgt tot de applicatie, maar dat "Cars" nog een foutmelding geeft. Hier gaan we nu aan
 werken.
 
+## Rol en administrator maken
 
+Om de rol van Admin en een administrator-gebruiker te maken, gaan we een deel aan de Startup.cs van IdentityServer toevoegen. Open het bestand en voeg
+de volgende methode onder "Configure" toe:
+
+```csharp
+
+private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var doesAdminRoleExist = await roleManager.RoleExistsAsync("Admin");
+
+            if (!doesAdminRoleExist)
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
+
+            var administrator = await userManager.FindByNameAsync("admin");
+            if (administrator == null)
+            {
+                await userManager.CreateAsync(new ApplicationUser
+                {
+                    UserName = "admin"
+                }, "AdminPassword123!");
+
+            }
+            
+            var storedAdministrator = await userManager.FindByNameAsync("admin");
+
+
+            await userManager.AddToRoleAsync(storedAdministrator, "Admin");
+        }
+
+```
+
+Deze code checkt of de administrator en de administrator rol bestaan. Als die niet bestaan, worden deze hierbij aangemaakt. Daarna wordt (wanneer dat nog niet zo is) de rol toegewezen aan de administrator.
+
+Scroll naar boven tot je bij het begin van de Configure-methode bent. Zorg dat hier de IServiceProvider wordt geinjecteerd en dat onze nieuwe methode wordt aangeroepen. Het begin van Configure ziet er nu zo uit:
+
+```csharp
+        public void Configure(IApplicationBuilder app, IServiceProvider provider)
+        {
+            CreateRoles(provider).Wait();
+```
+## Toevoegen van de Rol-claim
+
+We moeten de rol nu toevoegen aan de claims die in het token opgeslagen zijn. Om dit te doen, gaan we een interface van IdentityServer implementeren. Maak een nieuwe map genaamd "Services" aan in de hoofdmap van IdentityService. Maak hierin een bestand aan genaamd "ProfileService.cs". Voeg hier de volgende code aan toe:
+
+```cshtml
+ class ProfileService : IProfileService
+    {
+        public Task GetProfileDataAsync(ProfileDataRequestContext context)
+        {
+            var roleClaims = context.Subject.FindAll(JwtClaimTypes.Role);
+            context.IssuedClaims.AddRange(roleClaims);
+            return Task.CompletedTask;
+        }
+
+        public Task IsActiveAsync(IsActiveContext context)
+        {
+            return Task.CompletedTask;
+        }
+    }
+```
+
+Dit bestand moet vervolgens in de configuratie van IdentityService worden geladen. Ga naar het Startup.cs bestand van IdentityService en voeg de volgende code toe, helemaal onder aan de ConfigureServices methode:
+`services.AddTransient<IProfileService, ProfileService>();`
+
+## API om laten gaan met Claims
+
+Om de API ook van de claims die we net toegevoegd hebben af te laten weten, moeten we hier ook een klein stukje configuratie in toevoegen. Ga naar de Config.cs van IdentityService. 
+
+Voeg aan de lijst met IdentityResources de volgende code toe:
+
+`new IdentityResource("roles", new[] { "role" })`. Voeg daarna aan de allowedScopes van de client in de lijst met clients de volgende scope toe: `"roles"`. 
+
+We hebben nu de laatste IS4 wijzigingen gemaakt. Tijd voor de laatste stap.
+
+## Toepassen van roles in de MVCClient
+
+In deze laatste stap voegen we de nieuwe claims toe aan de MVC Client. Open de startup.cs van dit bestand en voeg onder `options.Scope.Add("api1");` in ConfigureServices het volgende toe:
+
+```csharp
+
+options.Scope.Add("roles");
+options.ClaimActions.MapJsonKey("role", "role", "role");
+options.TokenValidationParameters.RoleClaimType = "role";
+
+```
+
+Start alle projecten op nieuw op, log je uit in de MVC client en log je in met het Admin account (zie inloggegevens in de Startup.cs van IdentityServer). Klink nu op de "Cars" resource. Je zult nu resultaat zien.
