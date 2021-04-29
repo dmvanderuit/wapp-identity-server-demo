@@ -1,5 +1,9 @@
-﻿using IdentityServer.Data;
+﻿using System;
+using System.Threading.Tasks;
+using IdentityServer.Data;
 using IdentityServer.Models;
+using IdentityServer.Services;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -24,10 +28,7 @@ namespace IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(options =>
-            {
-                options.EnableEndpointRouting = false;
-            });
+            services.AddControllersWithViews(options => { options.EnableEndpointRouting = false; });
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -42,12 +43,15 @@ namespace IdentityServer
                 .AddInMemoryClients(Config.Clients)
                 .AddAspNetIdentity<ApplicationUser>();
 
+            services.AddTransient<IProfileService, ProfileService>();
+
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IServiceProvider provider)
         {
+            CreateRoles(provider).Wait();
 
             app.UseCookiePolicy(new CookiePolicyOptions
             {
@@ -64,10 +68,33 @@ namespace IdentityServer
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
+        }
+
+        private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var doesAdminRoleExist = await roleManager.RoleExistsAsync("Admin");
+
+            if (!doesAdminRoleExist)
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
+
+            var administrator = await userManager.FindByNameAsync("admin");
+            if (administrator == null)
             {
-                endpoints.MapDefaultControllerRoute();
-            });
+                await userManager.CreateAsync(new ApplicationUser
+                {
+                    UserName = "admin"
+                }, "AdminPassword123!");
+
+            }
+            
+            var storedAdministrator = await userManager.FindByNameAsync("admin");
+
+
+            await userManager.AddToRoleAsync(storedAdministrator, "Admin");
         }
     }
 }
